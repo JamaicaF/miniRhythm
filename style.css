@@ -1,3 +1,11 @@
+#canvas {
+  position: relative;
+  background: rgba(0, 0, 0, 0.9);
+  /* z-index: 1; */
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+}
+
 .links {
   font-size: 60px;
   color: black;
