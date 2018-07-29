@@ -1,14 +1,53 @@
-#canvas, #canvas2{
+html, body, header, nav, h1, a, ul, li, strong, main,
+button, i, section, img, div, h2, p, form, fieldset,
+label, input, textarea, span, article, footer, time, small {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+ul, li {
+  list-style: none;
+}
+
+/* img {
+  display: block;
+  width: 100%;
+  height: auto;
+} */
+
+button {
+  cursor: pointer;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 40px;
+  margin: 30px;
+}
+
+#canvas {
   display: block;
   position: relative;
   background: rgba(0, 0, 0, 0.9);
-  /* z-index: 1; */
   border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.9);
-
 }
 
 .links {
-  font-size: 60px;
+  font-size: 40px;
   color: black;
 }
