@@ -18,17 +18,11 @@ ul, li {
   list-style: none;
 }
 
-/* img {
-  display: block;
-  width: 100%;
-  height: auto;
-} */
-
 html {
   background: rgb(145,255,255);
 }
 
-button, span {
+.button, span {
   cursor: pointer;
 }
 
@@ -44,14 +38,41 @@ button, span {
   margin: 60px;
 }
 
+.master-controls {
+  display:block;
+  position: relative;
+  background: rgba(0, 0, 0, 0.9);
+  width: 840px;
+  height: 60px;
+  border-radius: 5px 5px 0 0 ;
+}
+
+.button-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.button {
+  background: rgb(196,201,192);
+  border-radius: 5px;
+  padding: 10px 30px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+#clear {
+  font-family: 'Raleway', sans-serif;
+}
+
 #canvas {
   display: block;
   position: relative;
   background: rgba(0, 0, 0, 0.9);
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
 }
 
-i {
+.links {
   font-size: 40px;
   color: rgb(0, 0, 0, 0.6);
   margin: 60px 40px 0 40px;

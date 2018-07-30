@@ -15,17 +15,24 @@
     <div class="page-content">
       <div class="title">miniRhythm</div>
 
-      <div>
+      <div class="machine">
+        <div class="master-controls">
+          <ul class="button-controls">
+            <span class="button" id="play"><i class="fas fa-play"></i></span>
+            <span class="button" id="stop"><i class="fas fa-stop"></i></span>
+            <span class="button" id="clear"><p>clear<p></span>
+          </ul>
+        </div>
         <canvas id="canvas" width="840px" height="280px"></canvas>
-        <!-- <canvas id="canvas2" width="840px" height="100px"></canvas> -->
       </div>
       <br />
 
-      <div class="links">
-        <br />
-        <span id="open-button"><i class="fas fa-question-circle"></i></span>
-        <a href="https://github.com/JamaicaF/miniRhythm"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/jamaicafredericks/"><i class="fab fa-linkedin"></i></a>
+      <div>
+        <ul class="links">
+          <span id="open-button"><i class="fas fa-question-circle"></i></span>
+          <a href="https://github.com/JamaicaF/miniRhythm"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/jamaicafredericks/"><i class="fab fa-linkedin"></i></a>
+        </ul>
 
         <a class="attribute" href="http://www.jamaicafredericks.com/">
           Built by Jamaica Fredericks, 2018</a>
@@ -37,7 +44,7 @@
             <span id="close-button">&times;</span>
           </div>
             </br >
-            
+
           <div class="modal-text">
             <p>miniRhythm is an audio step sequencer built with Tone.js, Audacity, and HTML5 canvas.
             </p><br />
