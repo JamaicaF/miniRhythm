@@ -61,7 +61,7 @@ html {
   margin-top: 20px;
 }
 
-#clear-button {
+#clear-button, #demo-button {
   font-family: 'Raleway', sans-serif;
 }
 
