@@ -1,50 +1,46 @@
-# miniRhythm
+# [miniRhythm](http://www.jamaicafredericks.com/miniRhythm/)
 
 ## Background
 
-Step sequencers are musical instruments that play rhythmic patterns. Users select the sounds they wish to play, and layer these sounds together within a short repeating interval. Sequencers have been a mainstay in electronic and computer music since the mid-twentieth century. This app is inspired by classic late-twentieth century drum machines.
+Step sequencers are musical instruments that play rhythmic patterns. Users select the sounds they wish to play, and layer these sounds together within a short repeating interval. Sequencers have been a mainstay in electronic and computer music since the mid-twentieth century. [miniRhythm](http://www.jamaicafredericks.com/miniRhythm/) is inspired by classic late-twentieth century drum machines.
 
-## Functionality & MVP
+## Functionality
 
-The app will incorporate key elements of a step sequencer:
+The app incorporates key elements of a step sequencer:
 
   - Step buttons control musical timing and duration
   - The sequencer triggers a sound source
   - A control surface enables users to further modify audio output
 
-Specifically, when playing the instrument, users will primarily interact with a grid of step buttons. The grid will be 4 rows tall (each row corresponding to a different percussive sound) and 16 buttons wide (each column represents a 1/16 of a musical measure). Along the bottom of the step button grid, will be a corresponding display to indicate sequencer playback timing. Users will also have the ability to play, pause, and clear sequencer playback, as well as to adjust volume levels and playback tempo.
 
-## Wireframes
+  ![](./assets/minirhythm_full.jpg)
 
-The app will consist of a single screen featuring all user controls, a link to toggle instructional modal(s), and links to the GitHub repository, my personal webpage, and my LinkedIn profile. Additional instrument playback functionality, including a further selection of playable audio sounds will be added later as bonus features.
-
-![](https://i.imgur.com/mxkoDSD.jpg?1)
+When playing the instrument, users primarily interact with a matrix of step buttons. Each matrix row corresponds to a different percussive sound and each column represents a 1/16 of a musical measure. Along the bottom of the step button matrix, is a sequencer display indicating playback timing. Users can play, pause, and clear step sequencer playback.
 
 ## Architecture and Technologies
 
-The project will be implemented with the following technologies:
+The app consists of a single page featuring all user controls, a link to toggle an instructional modal, and links to the GitHub repository.
+
+
+
+The project was implemented with the following technologies:
   - JavaScript for handling fundamental app logic
-  - Tone.js library for web audio implementation
+  - [Tone.js](https://tonejs.github.io/) framework for web audio implementation
+  - [Audacity](https://www.audacityteam.org/) audio editing software to normalize and compress .mp3 samples
   - CSS, HTML5, and Canvas for visualization
   - Webpack to bundle .js files
 
-In addition to the entry file, project scripts will include:
+In addition to the entry file, project scripts include:
 
-`player.js` where sample playback will be through either the `Tone.Player` or `Tone.Sampler`. The sound samples for audio playback will be mp3s from freesound.org (Creative Commons). `Tone.Sequence` will control playback scheduling.
+`player.js` where audio samples are triggered via the `Tone.Players` class. `Tone.Sequence` controls loop sequence scheduling through an event callback and internal clock.
+All samples were sourced from [freesound.org](https://freesound.org/).
 
-`controlSurface.js` will contain logic for rendering the instrument graphic user interface and display. This may be refactored into further components as needed.
+`data.js` manages the current playback and sequencer state. Playback mode is stored as an array of 'channel' objects.
 
-`modal.js` will contain informational text to assist users and give project context. 
+`controlSurface.js` and `sequence.js` contain logic for rendering the instrument graphic user interface and display.
 
-## Implementation Timeline
+## Future Improvements
 
-**Day 1:** Setup npm packages and webpack, including installing Tone.js. Start writing entry file and `player.js` file. Learn more about Tone.js. _Primary goal:_ Have a solid app foundation, basic browser audio playback, and a clear plan for how to implement audio sample playback and sequencing.
-
-**Day 2:** Select, download, and prep audio sample files for playback. Start writing `controlSurface.js`. _Primary goal:_ Have basic sample playback and looping functionality.
-
-**Day 3:** Improve UI and visual styling with CSS and Canvas. Add any remaining control surface functionality (play, pause, clear, volume, and tempo). If time, add additional volume level controls for each audio element.
-
-## Bonus Features
-
-- Add audio effects options: reverb, delay, pitch-shifting, or panning
-- Increase number of audio sounds for greater playback variety
+- Add greater control surface functionality: volume levels, tempo, and swing
+- Include volume level controls for each individual audio element
+- Increase number of audio sounds and audio effects (reverb, delay, panning) for greater playback variety
