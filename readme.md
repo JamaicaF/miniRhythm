@@ -1,7 +1,7 @@
 # miniRhythm README
 
 ## Background
-ßµ
+
 Step sequencers are musical instruments that play rhythmic patterns. Users select the sounds they wish to play, and layer these sounds together within a short repeating interval. Sequencers have been a mainstay in electronic and computer music since the mid-twentieth century. _miniRhythm_ is a step sequencer inspired by classic drum machines.
 
 [miniRhythm live site](http://www.jamaicafredericks.com/miniRhythm/)
