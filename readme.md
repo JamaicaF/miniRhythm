@@ -1,7 +1,7 @@
 # miniRhythm README
 
 ## Background
-
+ßµ
 Step sequencers are musical instruments that play rhythmic patterns. Users select the sounds they wish to play, and layer these sounds together within a short repeating interval. Sequencers have been a mainstay in electronic and computer music since the mid-twentieth century. _miniRhythm_ is a step sequencer inspired by classic drum machines.
 
 [miniRhythm live site](http://www.jamaicafredericks.com/miniRhythm/)
@@ -35,7 +35,7 @@ In addition to the entry file, project scripts include:
 
 - `player.js` employs `Tone.js` framework architecture to maintain an internal player clock and trigger audio samples.  The `Tone.Players` class takes an object referencing sample files, which is then routed to the `AudioDestinationNode` master output. `Tone.Sequence` controls loop sequence scheduling through an event callback, event sequence, and internal clock. For each event in the sequence, the player fetches the audio files that correspond to current playback state.
 
-```
+```js
 this.player = new Tone.Players({
   "clap": "./audio/clap128.mp3",
   "clhat": "./audio/808-chh128.mp3",
@@ -58,7 +58,7 @@ this.loop = new Tone.Sequence((time, col) => {
 
 `data.js` manages both current playback and sequencer state. Playback state is stored as an array of channel objects, each containing a channel name reference and an array of steps, 16 booleans corresponding to whether a user has toggled a specific sound on or off at that position within the sequence. Similarly, sequencer state is an array of 16 booleans, toggled by the Tone sequencer as it iterates through the event sequence.
 
-```
+```js
 class Data {
   constructor() {
     this.channels = [
