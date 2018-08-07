@@ -72,6 +72,12 @@ html {
   border-radius: 0 0 5px 5px;
 }
 
+.app-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .links {
   font-size: 40px;
   color: rgb(0, 0, 0, 0.6);
