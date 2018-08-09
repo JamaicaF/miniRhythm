@@ -120,12 +120,21 @@ html {
 }
 
 .close-button-flex {
+  display: flex;
+  justify-content: space-between;
 }
 
 #close-button {
   font-size: 40px;
   font-weight: 800;
   cursor: pointer;
+  position: relative;
+  top: -25px;
+}
+
+.modal-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 40px;
 }
 
 .modal-text {
